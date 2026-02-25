@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Temperature Converter</title>
+<link rel="stylesheet" href="tempstyle.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header>
+<h1>🌡 Smart Converter</h1>
+<button onclick="toggleTheme()" class="theme-toggle">🌙</button>
+</header>
+
+<div class="thermometer">
+<div class="thermo-fill" id="thermoFill"></div>
+</div>
+
+<input type="number" id="tempInput" placeholder="Enter temperature">
+
+<div class="controls">
+<select id="fromUnit">
+<option value="c">Celsius</option>
+<option value="f">Fahrenheit</option>
+<option value="k">Kelvin</option>
+</select>
+
+<button onclick="swapUnits()">⇄</button>
+
+<select id="toUnit">
+<option value="f">Fahrenheit</option>
+<option value="c">Celsius</option>
+<option value="k">Kelvin</option>
+</select>
+</div>
+
+<div class="result" id="result">Result will appear here</div>
+
+<h3>History</h3>
+<ul id="history"></ul>
+
+</div>
+
+<audio id="sound">
+<source src="https://www.soundjay.com/buttons/sounds/button-3.mp3">
+</audio>
+
+<script src="tempscript.js"></script>
+</body>
+</html>
